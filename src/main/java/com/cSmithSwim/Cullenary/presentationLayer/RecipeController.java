@@ -3,8 +3,8 @@ package com.cSmithSwim.Cullenary.presentationLayer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import  culinary.example.demo.businessLayer.Recipe;
-import  culinary.example.demo.businessLayer.RecipeService;
+import com.cSmithSwim.Cullenary.businessLayer.Recipe;
+import com.cSmithSwim.Cullenary.businessLayer.RecipeService;
 
 import javax.validation.Valid;
 import java.time.LocalDateTime;

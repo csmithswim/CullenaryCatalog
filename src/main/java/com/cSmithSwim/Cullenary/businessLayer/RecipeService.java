@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import culinary.example.demo.persistanceLayer.RecipeRepository;
+import com.cSmithSwim.Cullenary.persistanceLayer.RecipeRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -67,3 +67,5 @@ public class RecipeService {
         }
         return recipes;
     }
+
+}
