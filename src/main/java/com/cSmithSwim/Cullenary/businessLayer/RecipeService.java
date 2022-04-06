@@ -56,16 +56,13 @@ public class RecipeService {
             a = "name";
             String param = allParams.get(a);
             recipes = recipeRepository.findByName(param);
-//            recipes = recipeRepository.findByNameContainingIgnoreCaseOrderByDateDesc(param);
         } else if (allParams.containsKey("category")) {
             a = "category";
             String param = allParams.get(a);
             recipes = recipeRepository.findByCategory(param);
-//            recipes = recipeRepository.findByCategoryLikeIgnoreCaseOrderByDateDesc(param);
         } else {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "No such params");
         }
-        return recipes;
-    }
+        return recipes;    }
 
 }
