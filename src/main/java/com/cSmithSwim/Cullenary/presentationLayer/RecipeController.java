@@ -1,5 +1,6 @@
 package com.cSmithSwim.Cullenary.presentationLayer;
 
+import com.cSmithSwim.Cullenary.persistanceLayer.RecipeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +27,11 @@ public class RecipeController {
         recipe.setDate(LocalDateTime.now());
         Recipe newRecipe = recipeService.save(recipe);
         return String.format("{\"id\": %d}", newRecipe.getId());
+    }
+
+    @GetMapping("/recipe")
+    public List<Recipe> showAllRecipes() {
+        return recipeService.findAll();
     }
 
     @GetMapping("/recipe/{id}")

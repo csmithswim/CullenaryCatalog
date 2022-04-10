@@ -26,8 +26,11 @@ A Spring Boot Culinary Recipe Catalog Application.
 * The RecipeController class handles the specific presentation layer of the application and contains the endpoints for the RecipeService methods.
 
 -------------
-
 ### Running The Application
+
+Note: This application does not have a front end for route handling. Any testing and use must be done using cURL, Postman or a similar application. 
+
+I will be using cURL and Postman for illustrative purposes. 
 
 
 
@@ -35,4 +38,3 @@ A Spring Boot Culinary Recipe Catalog Application.
 
 ### Final Thoughts
 
-All HTTP requests must be done with cURL request or postman.

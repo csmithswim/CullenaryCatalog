@@ -8,6 +8,7 @@ import org.springframework.web.server.ResponseStatusException;
 import com.cSmithSwim.Cullenary.persistanceLayer.RecipeRepository;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -30,6 +31,12 @@ public class RecipeService {
                         new ResponseStatusException(HttpStatus.NOT_FOUND,
                                 "Recipe not found for id = " + id));
     }
+    public List<Recipe> findAll() {
+        Iterable<Recipe> source = recipeRepository.findAll();
+        List<Recipe> recipes = new ArrayList<>();
+        source.forEach(recipes::add);
+        return recipes;
+    }
 
     public void deleteRecipeById(Long id) {
         Recipe recipe = findRecipeById(id);
@@ -38,7 +45,6 @@ public class RecipeService {
 
     public void updateRecipe(Long id, Recipe recipe) {
         Recipe storedRecipe = findRecipeById(id);
-
         storedRecipe.setName(recipe.getName());
         storedRecipe.setCategory(recipe.getCategory());
         storedRecipe.setDescription(recipe.getDescription());
@@ -63,6 +69,5 @@ public class RecipeService {
         } else {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "No such params");
         }
-        return recipes;    }
-
+        return recipes;}
 }
