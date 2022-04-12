@@ -32,6 +32,13 @@ Note: This application does not have a front end for route handling. Any testing
 
 I will be using cURL and Postman for illustrative purposes. 
 
+My web server is run on the default localhost:8080 that Spring Boot supplies. All requests follow the pattern of {default_server_address_port}/api/recipe 
+
+See examples below for specific endpoitns.
+
+**Posting A Recipe**
+
+
 
 
 -------------
