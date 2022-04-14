@@ -36,21 +36,64 @@ My web server is run on the default localhost:8080 that Spring Boot supplies. Al
 
 See examples below for specific routes and their features.
 
-**Posting A Recipe**
-To post a recipe using this application one needs to use this endpoint with Postman or cURL: **{default_server_address_port}/api/recipe/new**
+#### Posting A Recipe
+
+To post a recipe using this application one needs to use this endpoint with Postman or cURL: _{default_server_address_port}/api/recipe/new_
 
 If the HTTP post request was a success with status code 200 then the response will be the primary key mapped to the recipe.
 
 ![post_request](https://github.com/csmithswim/cullenarycatalog/blob/main/images/post.png)
 
-**Getting All Recipes**
+#### Getting All Recipes
+
+This application can get a recipe by its ID or can get all recipes. Let's presume we added some more recipes to show both requests.
+
+**Get All Recipes**
+_{default_server_address_port}/api/recipe
+
+![get_all_recipes](https://github.com/csmithswim/cullenarycatalog/blob/main/images/get.png)
 
 
+**Get Recipe By Id**
+_{default_server_address_port}/api/recipe/{id}_
 
+![get_recipe_by_id](https://github.com/csmithswim/cullenarycatalog/blob/main/images/find%20by%20ID.png)
 
+#### Updating A Recipe
 
+**Update A Recipe By Id**
+Note: Make sure 'PUT' is selected with your Postman or cURL request.
 
+_{default_server_address_port}/api/recipe/{id}_
 
+![update_recipe_by_id](https://github.com/csmithswim/cullenarycatalog/blob/main/images/put%201.png)
+
+#### Searching By Name Or Category
+
+Note: These two methods are GET requests that use query parameters to fetch and sort recipes by date.
+
+**Search By Category**
+
+_{default_server_address_port}/api/recipe/search/?category={category}_
+
+![search_by_category](https://github.com/csmithswim/cullenarycatalog/blob/main/images/search%20by%20category.png)
+
+**Search By Name**
+
+_{default_server_address_port}/api/recipe/search/?name={name}_
+
+![search_by_name](https://github.com/csmithswim/cullenarycatalog/blob/main/images/search%20by%20name.png)
+
+#### Deleting A Recipe
+Note: The DELETE request uses the recipe's primary key as the path variable and if successful will respond with a HTTP status code of 204 (No Content).
+
+_{default_server_address_port}/api/recipe/{id}_
+
+![delete_by_id](https://github.com/csmithswim/cullenarycatalog/blob/main/images/delete%20by%20ID.png)
+
+A GET request to test that the recipe was deleted from our database: 
+
+![delete_by_id_2](https://github.com/csmithswim/cullenarycatalog/blob/main/images/delete%20by%20ID%202.png)
 
 -------------
 
