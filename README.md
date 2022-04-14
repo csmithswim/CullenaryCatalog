@@ -34,9 +34,20 @@ I will be using cURL and Postman for illustrative purposes.
 
 My web server is run on the default localhost:8080 that Spring Boot supplies. All requests follow the pattern of {default_server_address_port}/api/recipe 
 
-See examples below for specific endpoitns.
+See examples below for specific routes and their features.
 
 **Posting A Recipe**
+To post a recipe using this application one needs to use this endpoint with Postman or cURL: **{default_server_address_port}/api/recipe/new**
+
+If the HTTP post request was a success with status code 200 then the response will be the primary key mapped to the recipe.
+
+![post_request](https://github.com/csmithswim/cullenarycatalog/blob/main/images/post.png)
+
+**Getting All Recipes**
+
+
+
+
 
 
 
