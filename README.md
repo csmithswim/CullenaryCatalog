@@ -50,10 +50,10 @@ See examples below for specific routes and their features.
 
 #### Posting A Recipe
 
-**@PostMapping Route**
 
 
- ```{default_server_address_port}/api/recipe/new```
+
+**@PostMapping Route**: ```{default_server_address_port}/api/recipe/new```
 
 
 ![post_request](https://github.com/csmithswim/cullenarycatalog/blob/main/images/post.png)
@@ -65,7 +65,7 @@ This application can get a recipe by its ID or can get all recipes. Let's presum
 **Get All Recipes**
 
 
-```{default_server_address_port}/api/recipe```
+@GetMappingRoute: ```{default_server_address_port}/api/recipe```
 
 ![get_all_recipes](https://github.com/csmithswim/cullenarycatalog/blob/main/images/get.png)
 
@@ -73,7 +73,7 @@ This application can get a recipe by its ID or can get all recipes. Let's presum
 **Get Recipe By Id**
 
 
-```_{default_server_address_port}/api/recipe/{id}_```
+@GetMapping Route: ```_{default_server_address_port}/api/recipe/{id}_```
 
 ![get_recipe_by_id](https://github.com/csmithswim/cullenarycatalog/blob/main/images/find%20by%20ID.png)
 
@@ -81,7 +81,7 @@ This application can get a recipe by its ID or can get all recipes. Let's presum
 
 **Update A Recipe By Id**
 
-```{default_server_address_port}/api/recipe/{id}```
+@PutMapping Route: ```{default_server_address_port}/api/recipe/{id}```
 
 ![update_recipe_by_id](https://github.com/csmithswim/cullenarycatalog/blob/main/images/put%201.png)
 
@@ -91,20 +91,20 @@ Note: These two methods are GET requests that use query parameters to fetch and 
 
 **Search By Category**
 
-```{default_server_address_port}/api/recipe/search/?category={category}```
+@GetMapping Route: ```{default_server_address_port}/api/recipe/search/?category={category}```
 
 ![search_by_category](https://github.com/csmithswim/cullenarycatalog/blob/main/images/search%20by%20category.png)
 
 **Search By Name**
 
-```{default_server_address_port}/api/recipe/search/?name={name}```
+@GetMapping Route: ```{default_server_address_port}/api/recipe/search/?name={name}```
 
 ![search_by_name](https://github.com/csmithswim/cullenarycatalog/blob/main/images/search%20by%20name.png)
 
 #### Deleting A Recipe
 Note: The DELETE request uses the recipe's primary key as the path variable and if successful will respond with an HTTP status code of 204 (No Content).
 
-```{default_server_address_port}/api/recipe/{id}```
+@DeleteMapping Route: ```{default_server_address_port}/api/recipe/{id}```
 
 ![delete_by_id](https://github.com/csmithswim/cullenarycatalog/blob/main/images/delete%20by%20ID.png)
 
@@ -114,7 +114,12 @@ A GET request to test that the recipe was deleted from our database:
 
 -------------
 
-
-
 ### Final Thoughts
+
+This project was very rewarding and educational. I wanted to learn more about JPA and how Spring can manage a relational database such as MYSQL and also how Spring manages RESTful 
+API's. I learned a great deal about service oriented software architecture, dependency management, JSON, and LocalDateTime. Ultimately the most important thing I learned was 
+how quickly Spring Boot could build, configure and manage a backend Java database and web server. 
+
+One thing I would like to incorporate in the future would be a fully 
+functional front end layer to allow user's to type and enter their queries to the server. 
 
