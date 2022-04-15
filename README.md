@@ -2,8 +2,10 @@
 Recipe Catalog Application. Built with Spring Boot, Maven and Intellij IDEA.
 
 ### About
-I have cooked professionally for most of my life and wanted to learn more about Spring Boot, JPA, microservices and REST with a culinary context.
-My first name is Cullen and you can't spell Cullenary without cullen. :wink:
+I cooked professionally for most of my life and wanted to learn more about Spring Boot, JPA, microservices and REST with a culinary context.
+
+
+My first name is Cullen and you can't spell Cullenary without Cullen. :wink:
 
 -------------
 
@@ -11,7 +13,7 @@ My first name is Cullen and you can't spell Cullenary without cullen. :wink:
 
 * A multi-layered Spring Boot application that manages different web services and API's.
 * Creates a MYSQL server, database and table to store recipe information on run time.
-* Recipes can be posted, viewed, updated, searched for and deleted.
+* Recipes can be posted, viewed, updated and deleted.
 * Recipes are stored and persist in a MYSQL database.
 * Recipes can be searched for based upon their name or category. The HTTP response sorts the recipes by the date that they were modified by.
 
@@ -24,10 +26,10 @@ My first name is Cullen and you can't spell Cullenary without cullen. :wink:
 * Lombok eliminates much of the boilerplate code in the Recipe model class.
 * The Recipe model class consists of a unique ID, name, category, date, description, ingredients and directions. The name, message, category and description must not be blank 
   while the ingredients must not be null when making HTTP requests.
-* The RecipeService class contains methods that will save a recipe, find a recipe by ID, delete a recipe by ID, update a recipe and search for a recipe by category or name. Error 
-  handling 
-  and HTTP 
-  status codes are present in methods to ensure proper functionality.
+* The RecipeService class contains methods related to database management that will save a recipe, get all recipes, find a recipe by ID, delete a recipe by ID, update a recipe and 
+  search for a 
+  recipe by 
+  category or name. 
 * The RecipeRepository interface has two methods to find a recipe by name or find a category and also extends the JPA's CrudRepository.
 * The RecipeController class handles the specific presentation layer of the application and contains the endpoints for the RecipeService methods.
 
@@ -44,15 +46,12 @@ This application presumes that one has MSQL installed and a running instance of 
 properties in the resources' folder. 
 More information related to this can be found here: https://spring.io/guides/gs/accessing-data-mysql/
 
-  
-
 See examples below for specific routes and their features.
 
 #### Posting A Recipe
 
-To post a recipe using this application one needs to use this endpoint with Postman or cURL: _{default_server_address_port}/api/recipe/new_
+To post a recipe using this application one needs to use this endpoint with Postman or cURL: ```{default_server_address_port}/api/recipe/new```
 
-If the HTTP post request was a success with status code 200 then the response will be the primary key mapped to the recipe.
 
 ![post_request](https://github.com/csmithswim/cullenarycatalog/blob/main/images/post.png)
 
@@ -61,7 +60,7 @@ If the HTTP post request was a success with status code 200 then the response wi
 This application can get a recipe by its ID or can get all recipes. Let's presume we added some more recipes to show both requests.
 
 **Get All Recipes**
-_{default_server_address_port}/api/recipe
+`````{default_server_address_port}/api/recipe```
 
 ![get_all_recipes](https://github.com/csmithswim/cullenarycatalog/blob/main/images/get.png)
 
