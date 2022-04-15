@@ -60,7 +60,7 @@ To post a recipe using this application one needs to use this endpoint with Post
 This application can get a recipe by its ID or can get all recipes. Let's presume we added some more recipes to show both requests.
 
 **Get All Recipes**
-`````{default_server_address_port}/api/recipe```
+```{default_server_address_port}/api/recipe```
 
 ![get_all_recipes](https://github.com/csmithswim/cullenarycatalog/blob/main/images/get.png)
 
@@ -75,7 +75,7 @@ _{default_server_address_port}/api/recipe/{id}_
 **Update A Recipe By Id**
 Note: Make sure 'PUT' is selected with your Postman or cURL request.
 
-_{default_server_address_port}/api/recipe/{id}_
+```{default_server_address_port}/api/recipe/{id}```
 
 ![update_recipe_by_id](https://github.com/csmithswim/cullenarycatalog/blob/main/images/put%201.png)
 
@@ -85,20 +85,20 @@ Note: These two methods are GET requests that use query parameters to fetch and 
 
 **Search By Category**
 
-_{default_server_address_port}/api/recipe/search/?category={category}_
+```{default_server_address_port}/api/recipe/search/?category={category}```
 
 ![search_by_category](https://github.com/csmithswim/cullenarycatalog/blob/main/images/search%20by%20category.png)
 
 **Search By Name**
 
-_{default_server_address_port}/api/recipe/search/?name={name}_
+```{default_server_address_port}/api/recipe/search/?name={name}```
 
 ![search_by_name](https://github.com/csmithswim/cullenarycatalog/blob/main/images/search%20by%20name.png)
 
 #### Deleting A Recipe
 Note: The DELETE request uses the recipe's primary key as the path variable and if successful will respond with a HTTP status code of 204 (No Content).
 
-_{default_server_address_port}/api/recipe/{id}_
+```{default_server_address_port}/api/recipe/{id}```
 
 ![delete_by_id](https://github.com/csmithswim/cullenarycatalog/blob/main/images/delete%20by%20ID.png)
 
