@@ -2,7 +2,7 @@
 Recipe Catalog Application. Built with Spring Boot, Maven and Intellij IDEA.
 
 ### About
-I cooked professionally for most of my life and wanted to learn more about Spring Boot, JPA, microservices and REST with a culinary context.
+I cooked professionally for most of my life and wanted to learn more about Spring Boot, JPA and REST with a culinary context.
 
 
 My first name is Cullen and you can't spell Cullenary without Cullen. :wink:
@@ -50,7 +50,10 @@ See examples below for specific routes and their features.
 
 #### Posting A Recipe
 
-To post a recipe using this application one needs to use this endpoint with Postman or cURL: ```{default_server_address_port}/api/recipe/new```
+**@PostMapping Route**
+
+
+ ```{default_server_address_port}/api/recipe/new```
 
 
 ![post_request](https://github.com/csmithswim/cullenarycatalog/blob/main/images/post.png)
@@ -60,20 +63,23 @@ To post a recipe using this application one needs to use this endpoint with Post
 This application can get a recipe by its ID or can get all recipes. Let's presume we added some more recipes to show both requests.
 
 **Get All Recipes**
+
+
 ```{default_server_address_port}/api/recipe```
 
 ![get_all_recipes](https://github.com/csmithswim/cullenarycatalog/blob/main/images/get.png)
 
 
 **Get Recipe By Id**
-_{default_server_address_port}/api/recipe/{id}_
+
+
+```_{default_server_address_port}/api/recipe/{id}_```
 
 ![get_recipe_by_id](https://github.com/csmithswim/cullenarycatalog/blob/main/images/find%20by%20ID.png)
 
 #### Updating A Recipe
 
 **Update A Recipe By Id**
-Note: Make sure 'PUT' is selected with your Postman or cURL request.
 
 ```{default_server_address_port}/api/recipe/{id}```
 
@@ -96,7 +102,7 @@ Note: These two methods are GET requests that use query parameters to fetch and 
 ![search_by_name](https://github.com/csmithswim/cullenarycatalog/blob/main/images/search%20by%20name.png)
 
 #### Deleting A Recipe
-Note: The DELETE request uses the recipe's primary key as the path variable and if successful will respond with a HTTP status code of 204 (No Content).
+Note: The DELETE request uses the recipe's primary key as the path variable and if successful will respond with an HTTP status code of 204 (No Content).
 
 ```{default_server_address_port}/api/recipe/{id}```
 
@@ -107,6 +113,8 @@ A GET request to test that the recipe was deleted from our database:
 ![delete_by_id_2](https://github.com/csmithswim/cullenarycatalog/blob/main/images/delete%20by%20ID%202.png)
 
 -------------
+
+
 
 ### Final Thoughts
 
